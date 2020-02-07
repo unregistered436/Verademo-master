@@ -28,13 +28,13 @@ jobs:
     - name: Get the Java API wrapper
       uses: wei/curl@master
       with:
-        args: -sS -o VeracodeJavaAPI.jar "https://repo1.maven.org/maven2/com/veracode/vosp/api/wrappers/vosp-api-wrappers-java/${secrets.VERACODE_WRAPPER_VERSION}/vosp-api-wrappers-java-${secrets.VERACODE_WRAPPER_VERSION}.jar"
+        args: -sS -o VeracodeJavaAPI.jar "https://repo1.maven.org/maven2/com/veracode/vosp/api/wrappers/vosp-api-wrappers-java/19.6.5.8/vosp-api-wrappers-java-19.6.5.8.jar"
 
     - name: Start SAST scan
       run: java -jar VeracodeJavaAPI.jar
       -action uploadandscan
-      -vid ${VERACODE_API_ID}
-      -vkey ${VERACODE_API_SECRET}
+      -vid ${{secrets.VERACODE_API_ID}}
+      -vkey ${secrets.VERACODE_API_SECRET}}
       -appname VeraDemo
       -createprofile false
       -scantimeout 30
