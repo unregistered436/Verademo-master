@@ -40,3 +40,6 @@ jobs:
       -scantimeout 30
       -version "GitHub Actions job $GITHUB_RUN_NUMBER"
       -filepath target/verademo.war
+     env:
+       VERACODE_API_ID: secrets.VERACODE_API_ID
+       VERACODE_API_SECRET: secrets.VERACODE_API_SECRET
