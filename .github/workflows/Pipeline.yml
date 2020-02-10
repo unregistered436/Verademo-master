@@ -24,6 +24,6 @@ jobs:
     
     - name: Unzip the Pipeline Scanner
       run: unzip devops-scanner-java-LATEST.zip devops-scanner-java.jar
-    # name OK?
+ 
     - name: Engage Ludicrous Speed - Run Pipeline Scan
       run: java -jar devops-scanner-java.jar --jar /home/runner/work/Verademo-master/Verademo-master/target/verademo.war --api_id "${{secrets.VERACODE_API_ID}}" --api_secret_key "${{secrets.VERACODE_API_SECRET}}" --best_practices true
