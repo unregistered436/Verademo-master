@@ -20,10 +20,10 @@ jobs:
     - name: Download the Pipeline Scanner
       uses: wei/curl@master
       with:
-        args: -O https://downloads.veracode.com/securityscan/devops-scanner-java-LATEST.zip
+        args: -O https://downloads.veracode.com/securityscan/pipeline-scan-LATEST.zip
     
     - name: Unzip the Pipeline Scanner
-      run: unzip devops-scanner-java-LATEST.zip devops-scanner-java.jar
+      run: unzip pipeline-scan-LATEST.zip pipeline-scan.jar
  
     - name: Engage Ludicrous Speed - Run Pipeline Scan
-      run: java -jar devops-scanner-java.jar --jar /home/runner/work/Verademo-master/Verademo-master/target/verademo.war --api_id "${{secrets.VERACODE_API_ID}}" --api_secret_key "${{secrets.VERACODE_API_SECRET}}" --best_practices true
+      run: java -jar pipeline-scan.jar --jar /home/runner/work/Verademo-master/Verademo-master/target/verademo.war --api_id "${{secrets.VERACODE_API_ID}}" --api_secret_key "${{secrets.VERACODE_API_SECRET}}" --best_practices true
