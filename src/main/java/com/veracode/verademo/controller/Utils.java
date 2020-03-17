@@ -1,5 +1,5 @@
 package com.veracode.verademo.controller;
-/* 11:20 test */
+
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
