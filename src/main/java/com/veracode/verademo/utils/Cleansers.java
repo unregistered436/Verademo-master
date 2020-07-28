@@ -1,4 +1,3 @@
-// test
 package com.veracode.verademo.utils;
 
 import java.util.*;
