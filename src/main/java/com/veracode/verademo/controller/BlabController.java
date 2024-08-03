@@ -1,4 +1,4 @@
-/* commit to force scan */
+/* commit to force scan for Dependabot */
 package com.veracode.verademo.controller;
 
 import java.sql.Connection;
